@@ -1,0 +1,33 @@
+server:
+  port: 9002
+spring: 
+  datasource: 
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tweet_db
+    username: root
+    password: root
+  jpa: 
+    hibernate.ddl-auto: update
+    show-sql: true
+    properties.hibernate.format_sql: true
+  servlet:
+    multipart.enabled: true
+    multipart.max-file-size: 10MB
+    multipart.max-request-size: 10MB
+  application:
+    name: TweetMS
+  cloud:
+    consul:
+      hosting: localhost
+      discovery:
+        hostname: localhost        
+
+        
+Tweet: 
+  EXISTS: The tweet already exists
+  NOT_FOUND: The tweet for the corresponding user id's not found
+  EXCEPTION: There seems to be some error.
+  SUCCESS: The tweets have been retrieved for the tweet id 
+  SIZE_EXCEPTION: The size of tweet cannot be more than 280 characters or less than one character.
+  ADD_SUCCESS: The tweet has been added successfully with tweet id 
+  DELETE_SUCCESS: The tweet has beem successfully deleted

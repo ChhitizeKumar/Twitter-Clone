@@ -1,0 +1,30 @@
+server:
+  port: 9005
+spring: 
+  datasource: 
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/followers_following_db
+    username: root
+    password: root
+  jpa: 
+    hibernate.ddl-auto: update
+    show-sql: true
+    properties.hibernate.format_sql: true
+  servlet:
+    multipart.enabled: true
+    multipart.max-file-size: 10MB
+    multipart.max-request-size: 10MB
+  application:
+    name: FollowersMS
+  cloud:
+    consul:
+      hosting: localhost
+      discovery:
+        hostname: localhost        
+
+        
+FollowerAPI: 
+  USER_FOLLOWED_SUCCESS: Followed Successfully User with user id
+  USER_UNFOLLOWED_SUCCESS: Unfollowed Successfully User with user id
+Service:
+  USER_ALREADY_FOLLOWED: Already Followed 

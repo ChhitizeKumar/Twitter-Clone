@@ -1,0 +1,33 @@
+server:
+  port: 9100
+spring:
+  application:
+    name: GatewayMS
+  cloud:
+    consul:
+      host: localhost
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: MediaMS
+        uri: lb://MediaMS
+        predicates:
+        - Path=/api/media/**
+      - id: SearchAndDiscoveryMS
+        uri: lb://SearchAndDiscoveryMS
+        predicates:
+        - Path=/api/search/**
+      - id: TweetMS
+        uri: lb://TweetMS
+        predicates:
+        - Path=/api/tweet/**
+      - id: UserMS
+        uri: lb://UserMS
+        predicates:
+        - Path=/api/user/**
+      - id: FollowersMS
+        uri: lb://FollowersMS
+        predicates:
+        - Path=/api/**        

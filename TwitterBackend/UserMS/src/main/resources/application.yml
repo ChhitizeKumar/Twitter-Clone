@@ -1,0 +1,28 @@
+server:
+  port: 9001
+spring: 
+  datasource: 
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/twitter_user_db
+    username: root
+    password: root
+  jpa: 
+    hibernate.ddl-auto: update
+    show-sql: true
+    properties.hibernate.format_sql: true
+  servlet:
+    multipart.enabled: true
+    multipart.max-file-size: 10MB
+    multipart.max-request-size: 10MB
+  application:
+    name: UserMS
+  cloud:
+    consul:
+      hosting: localhost
+      discovery:
+        hostname: localhost        
+
+        
+UserAPI: 
+  LOGIN_SUCCESS: Logged in successfully with User Id
+  Register_SUCCESS: User registered successfully with User Id

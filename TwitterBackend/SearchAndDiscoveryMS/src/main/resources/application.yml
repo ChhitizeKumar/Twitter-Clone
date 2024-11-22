@@ -1,0 +1,24 @@
+server:
+  port: 9003
+spring: 
+  datasource: 
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/user_db
+    username: root
+    password: root
+  jpa: 
+    hibernate.ddl-auto: update
+    show-sql: true
+    properties.hibernate.format_sql: true
+  application:
+    name: SearchAndDiscoveryMS
+  cloud:
+    consul:
+      hosting: localhost
+      discovery:
+        hostname: localhost        
+
+        
+Search: 
+  NOT_FOUND: No person found with the entered name.   
+  ADDED: user successfully added with search id
