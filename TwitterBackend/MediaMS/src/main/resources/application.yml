@@ -2,7 +2,7 @@ server:
   port: 9004
 spring: 
   data:
-    mongodb.uri: mongodb://localhost:27017/twitter_media_db 
+    mongodb.uri: mongodb://localhost:27017/twitter_media
 #    driverClassName: com.mysql.cj.jdbc.Driver
 #    url: jdbc:mysql://localhost:3306/followers_following_db
 #    username: root
@@ -13,6 +13,4 @@ spring:
     consul:
       hosting: localhost
       discovery:
-        hostname: localhost        
-
-   
+        hostname: localhost

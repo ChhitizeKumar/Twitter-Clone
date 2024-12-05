@@ -13,7 +13,7 @@ CREATE TABLE User (
     profile_image_media_id VARCHAR(255)
 );
 
-INSERT INTO User (email, fullName, password, username, profileImageMediaId)
+INSERT INTO User (email, full_name, password, username, profile_image_media_id)
 VALUES
 ('john.doe@example.com', 'John Doe', 'encrypted_password_123', 'johndoe', 'media_001'),
 ('jane.smith@example.com', 'Jane Smith', 'encrypted_password_456', 'janesmith', 'media_002'),
